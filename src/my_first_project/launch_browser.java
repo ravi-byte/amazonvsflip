@@ -29,11 +29,9 @@ public class launch_browser {
 		Actions actionnew = new Actions(driver);
 		
 		driver.findElement(By.className("_2AkmmA _29YdH8")).click();
-		driver.findElement(By.xpath("//*[@id='popsubform']/a/img")).click();
-		WebElement myelementnew=driver.findElement(By.className("O8ZS_U"));
-		myelementnew.sendKeys("iPhone XR (64GB) - Yellow");
-		driver.findElement(By.className("xmlns=\"http://www.w3.org/2000/svg\"")).click();		
-		String flipkartValue=driver.findElement(By.className("a-price-whole")).getText();
+		driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input")).sendKeys("iPhone XR (64GB) - Yellow");
+				
+		String flipkartValue=driver.findElement(By.className("_1vC4OE _2rQ-NK")).getText();
 		System.out.println(flipkartValue);
 		if(Integer.parseInt(amazonValue)>Integer.parseInt(flipkartValue))
 		{
